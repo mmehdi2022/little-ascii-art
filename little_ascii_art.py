@@ -81,8 +81,8 @@ def get_pixel(path:str):
     
 
 def main():
-    if len(sys.argv) < 2 and len(sys.argv) > 3:
-        print(f'{Fore.RED}[*]{Fore.RESET} Input format is <file name> <size:50x50 -> optional>')
+    if len(sys.argv) < 2 or len(sys.argv) > 3:
+        print(f'{Fore.RED}[*] Input format is <file name> <size:50x50 -> optional>{Fore.RESET}')
     path = sys.argv[1]
     try:
         size = tuple(map(int, sys.argv[2].split('x')))
